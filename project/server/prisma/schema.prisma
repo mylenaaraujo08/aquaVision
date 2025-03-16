@@ -1,0 +1,67 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id             Int           @id @default(autoincrement())
+  nome           String
+  email          String        @unique
+  cnpj           String
+  senha          String
+  Pontos  Ponto[]
+}
+
+enum TipoPonto {
+  RIO
+  RESERVATORIO
+}
+
+model Ponto {
+  id                     Int       @id @default(autoincrement())
+  nome                   String
+  latitude               Float
+  longitude              Float
+  ip                     String
+  tipo                   TipoPonto
+  imagem                 String
+
+  user                    User      @relation(fields: [user_id], references: [id])
+
+  user_id                 Int
+  parametro               Parametro[]
+  monitoramento           Monitoramento[]
+}
+
+enum Situacao {
+  NORMAL
+  ALERTA
+  CRITICO
+}
+
+model Monitoramento {
+  id                      Int       @id @default(autoincrement())
+  situacao                Situacao
+  pontoAlerta             String
+  Minimo             Float
+  Maximo             Float
+  pontoId          Int
+  ponto            Ponto @relation(fields: [pontoId], references: [id])
+}
+
+model Parametro {
+  id                      Int       @id @default(autoincrement())
+  ph                      Float
+  turbidez                 Float
+  condutividade           Float
+  temperature             Float
+  salinidade              Float
+  oxigenioDissolvido      Float
+  data                    DateTime
+  pontoId          Int
+  Ponto            Ponto @relation(fields: [pontoId], references: [id])
+}

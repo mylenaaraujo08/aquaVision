@@ -1,0 +1,123 @@
+<ion-content>
+  <img class="background-telas" src="/assets/img/background-telas.svg" alt="background-telas">
+
+        <div class="header">
+            <div class="identificador">
+                <img src="/assets/img/icons/config-ponto.svg" alt="icon">
+                <h1>CONFIGURAÇÕES</h1>
+            </div>
+            <div (click)="goToPage('ajuste-ponto')" class="voltar"><img src="/assets/img/icons/voltar.svg" alt="voltar"></div>
+        </div>
+
+        <div class="dados-content">
+            <h1>MONITORAMENTO REMOTO</h1>
+            
+            <div class="descri-section">
+                <img src="/assets/img/icons/desc-icon.svg" alt="descricao-icon">
+                <div class="desc-content">
+                    Insira nos campos abaixo, os dados que deseja definir como parametro para avisos e alertas.
+                </div>
+            </div>
+
+            <div class="content-add">
+                <div class="campo-param">
+                    <div class="select">
+                        <input name="ph" type="checkbox">
+                        <label for="ph">PH</label>
+                    </div>
+                    <div class="inputs">
+                        <div class="min">
+                            <label for="min">MÍNIMO</label>
+                            <input name="min" type="number">
+                        </div>
+                        <div class="max">
+                            <label for="max">MÁXIMO</label>
+                            <input name="max" type="number">
+                        </div>
+                    </div>
+                </div>
+                <div class="campo-param">
+                    <div class="select">
+                        <input name="ph" type="checkbox">
+                        <label for="ph">TURBIDEZ</label>
+                    </div>
+                    <div class="inputs">
+                        <div class="min">
+                            <label for="min">MÍNIMO</label>
+                            <input name="min" type="number">
+                        </div>
+                        <div class="max">
+                            <label for="max">MÁXIMO</label>
+                            <input name="max" type="number">
+                        </div>
+                    </div>
+                </div>
+                <div class="campo-param">
+                    <div class="select">
+                        <input name="ph" type="checkbox">
+                        <label for="ph">TEMP.</label>
+                    </div>
+                    <div class="inputs">
+                        <div class="min">
+                            <label for="min">MÍNIMO</label>
+                            <input name="min" type="number">
+                        </div>
+                        <div class="max">
+                            <label for="max">MÁXIMO</label>
+                            <input name="max" type="number">
+                        </div>
+                    </div>
+                </div>
+                <div class="campo-param">
+                    <div class="select">
+                        <input name="ph" type="checkbox">
+                        <label for="ph">CONDUTIVIDADE</label>
+                    </div>
+                    <div class="inputs">
+                        <div class="min">
+                            <label for="min">MÍNIMO</label>
+                            <input name="min" type="number">
+                        </div>
+                        <div class="max">
+                            <label for="max">MÁXIMO</label>
+                            <input name="max" type="number">
+                        </div>
+                    </div>
+                </div>
+                <div class="campo-param">
+                    <div class="select">
+                        <input name="ph" type="checkbox">
+                        <label for="ph">SALINIDADE</label>
+                    </div>
+                    <div class="inputs">
+                        <div class="min">
+                            <label for="min">MÍNIMO</label>
+                            <input name="min" type="number">
+                        </div>
+                        <div class="max">
+                            <label for="max">MÁXIMO</label>
+                            <input name="max" type="number">
+                        </div>
+                    </div>
+                </div>
+                <div class="campo-param">
+                    <div class="select">
+                        <input name="ph" type="checkbox">
+                        <label for="ph">OXIGÊNIO</label>
+                    </div>
+                    <div class="inputs">
+                        <div class="min">
+                            <label for="min">MÍNIMO</label>
+                            <input name="min" type="number">
+                        </div>
+                        <div class="max">
+                            <label for="max">MÁXIMO</label>
+                            <input name="max" type="number">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button (click)="goToPage('ajuste-ponto')">CONFIRMAR</button>
+        </div>
+</ion-content>

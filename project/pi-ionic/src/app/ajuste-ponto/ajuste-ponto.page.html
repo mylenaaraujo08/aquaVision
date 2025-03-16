@@ -1,0 +1,18 @@
+<ion-content>
+  <img class="background-telas" src="/assets/img/background-telas.svg" alt="background-telas">
+
+        <div class="header">
+            <div class="identificador">
+                <img src="/assets/img/icons/config-ponto.svg" alt="icon">
+                <h1>CONFIGURAÇÕES</h1>
+            </div>
+            <div (click)="goToPage('informacoes')" class="voltar"><img src="/assets/img/icons/voltar.svg" alt="voltar"></div>
+        </div>
+
+        <div class="configuracoes-content">
+            <button (click)="goToPage('cadastro-sensor')"><span>CADASTRAR SENSOR</span><img src="assets/img/icons/seta.svg" alt="icon"></button>
+            <button (click)="goToPage('adicionar-manualmente')"><span>ADICIONAR DADOS MANUALMENTE</span><img src="assets/img/icons/seta.svg" alt="icon"></button>
+            <button (click)="goToPage('add-manualmente')"><span>ADICIONAR MONITORAMENTO REMOTO</span><img src="assets/img/icons/seta.svg" alt="icon"></button>
+            <button (click)="openModal()" class="deletar-ponto"><span><img src="\assets\img\icons\trash.svg" alt="lixo-icon">DELETAR PONTO</span><img src="assets/img/icons/seta-ver.svg" alt="icon"></button>
+        </div>
+</ion-content>

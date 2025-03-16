@@ -1,0 +1,73 @@
+ion-content::part(background){
+    background-color: #00274F;
+}
+
+.background-telas{
+    position: absolute;
+    width: 100%;
+    z-index: -10;
+}
+
+.header{
+    display: flex;
+    width: 90%;
+    height: 72px;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 5%;
+}
+
+.header .identificador{
+    display: flex;
+    align-items: center;
+}
+
+.header .identificador h1{
+    font-family: 'Roboto';
+    font-size: 1.7em;
+    margin-left: 8px;
+    color: #E8EAED;
+    line-height: 0;
+}
+
+.configuracoes-content{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.configuracoes-content button{
+    margin: 8px 0;
+    padding: 15px;
+    display: flex;
+    width: 95%;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+    border-radius: 6px;
+    border: 1px solid #004994;
+    background: none;
+}
+
+.configuracoes-content button span{
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    color: #004994;
+    font-size: 1.1em;
+}
+
+.configuracoes-content button span img{
+    margin-right: 8px;
+}
+
+.deletar-ponto{
+    border: 1px solid #EB3223 !important;
+    background: #EEADAD !important;
+}
+
+.deletar-ponto span{
+    color: #EB3223 !important;
+}

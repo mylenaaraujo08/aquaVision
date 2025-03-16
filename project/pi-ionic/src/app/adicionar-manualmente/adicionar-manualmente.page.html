@@ -1,0 +1,52 @@
+<ion-content>
+  <img class="background-telas" src="/assets/img/background-telas.svg" alt="background-telas">
+
+        <div class="header">
+            <div class="identificador">
+                <img src="/assets/img/icons/config-ponto.svg" alt="icon">
+                <h1>CONFIGURAÇÕES</h1>
+            </div>
+            <div (click)="goToPage('ajuste-ponto')" class="voltar"><img src="/assets/img/icons/voltar.svg" alt="voltar"></div>
+        </div>
+
+        <div class="dados-content">
+            <h1>ADICIONAR MANUALMENTE</h1>
+            
+            <div class="descri-section">
+                <img src="/assets/img/icons/desc-icon.svg" alt="descricao-icon">
+                <div class="desc-content">
+                    Insira nos campos abaixo, os dados que deseja adicionar de maneira manual.
+                </div>
+            </div>
+
+            <div class="campos-dados">
+                <div class="input">
+                    <label for="ph">PH</label>
+                    <input name="ph" type="text">
+                </div>
+                <div class="input">
+                    <label for="ph">TEMPERATURA</label>
+                    <input name="ph" type="text">
+                </div>
+                <div class="input">
+                    <label for="ph">SALINIDADE</label>
+                    <input name="ph" type="text">
+                </div>
+                <div class="input">
+                    <label for="ph">TURBIDEZ</label>
+                    <input name="ph" type="text">
+                </div>
+                <div class="input">
+                    <label for="ph">CONDUTIVIDADE</label>
+                    <input name="ph" type="text">
+                </div>
+                <div class="input">
+                    <label for="ph">OXIGÊNIO</label>
+                    <input name="ph" type="text">
+                </div>
+            </div>
+
+            <button (click)="openModal()">CONFIRMAR</button>
+        </div>
+
+</ion-content>

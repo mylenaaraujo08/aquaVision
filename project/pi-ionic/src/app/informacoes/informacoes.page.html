@@ -1,0 +1,55 @@
+<ion-content>
+  <div class="header">
+    <div class="header-content">
+        <div class="identificador">
+            <img src="/assets/img/icons/gota.svg" alt="icon">
+            <h1>INFORMAÇÕES</h1>
+        </div>
+        <div (click)="goToPage('map')" class="voltar"><img src="/assets/img/icons/voltar.svg" alt="voltar"></div>
+    </div>
+  </div>
+
+  <div class="info-content">
+      <h1>SERRINHA II</h1>
+      <div class="tag-info-ponto">
+          RESERVATÓRIO
+      </div>
+      <div class="menu-info">
+          <div class="comparar-datas">
+              <div class="data">
+                  <div class="titulo">DATA</div>
+                  <span>13/12/2022</span>
+              </div>
+              <img id="AbrirModal" src=".\assets\img\icons\calendar-dates.svg" alt="calendar-dates">
+              <button (click)="goToPage('comparar-datas')">COMPARAR DATAS</button>
+          </div>
+          <button (click)="goToPage('ajuste-ponto')"><img src=".\assets\img\icons\config-ponto.svg" alt="config-ponto"></button>
+      </div>
+      <div class="dados-dashboard">
+          <div class="card-dado-dash">
+              <p>PH</p>
+              <span>7</span>
+          </div>
+          <div class="card-dado-dash">
+              <p>TURBIDEZ</p>
+              <span>35<p class="unidade-medida">uN</p></span>
+          </div>
+          <div class="card-dado-dash">
+              <p>TEMP.</p>
+              <span>27<img src=".\assets\img\icons\temp-icon.svg" alt="temp-icon"></span>
+          </div>
+          <div class="card-dado-dash cond-card">
+              <p>CONDUTIVIDADE</p>
+              <span>1<p class="unidade-medida">ms/cm²</p></span>
+          </div>
+          <div class="card-dado-dash salin-card alerta-card">
+              <p>SALINIDADE</p>
+              <span>30<p class="unidade-medida">ppt</p></span>
+          </div>
+          <div class="card-dado-dash oxig-card">
+              <p>OXIGÊNIO</p>
+              <span>20<p class="unidade-medida">mg/L</p></span>
+          </div>
+      </div>
+  </div>
+</ion-content>

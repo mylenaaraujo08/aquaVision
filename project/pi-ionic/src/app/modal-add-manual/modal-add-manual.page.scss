@@ -1,0 +1,116 @@
+
+
+.dados-dashboard{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px;
+    justify-content: space-between;
+}
+
+.dados-dashboard .card-dado-dash{
+    background: #E9E9E9;
+    border-radius: 13px;
+    padding: 5px 15px;
+    margin-bottom: 15px;
+    display: grid;
+}
+
+.dados-dashboard .card-dado-dash p{
+    font-size: .8em;
+    font-weight: 700;
+    color: #969696;
+    margin: 10px 0;
+}
+
+.dados-dashboard .card-dado-dash span{
+    display: flex;
+    color: #004D9C;
+    font-size: 2.5em;
+    font-weight: 500;
+    align-items: flex-end;
+    margin: 0 15px;
+    margin-top: 5px;
+}
+
+.dados-dashboard .card-dado-dash span p{
+    color: #004D9C;
+    font-weight: 400;
+    font-size: .5em;
+    margin-bottom: 3px;
+}
+
+.dados-dashboard .card-dado-dash span img{
+    width: .5em;
+    margin-bottom: 3px;
+}
+
+.oxig-card{
+    width: 100%;
+}
+
+.oxig-card span{
+    margin: 0 auto !important;
+}
+
+.salin-card span, .cond-card span{
+    margin: 0 30px !important;
+}
+
+.modal-content{
+    background: #fff;
+    width: 100%;
+    border-radius: 60px 60px 0 0;
+    box-shadow: 0px 5px 15px black;
+    font-family: 'Roboto';
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 50px 10px 50px 10px;
+    position: absolute;
+    bottom: 0;
+}
+
+.modal-content h1{
+    font-size: 1.8em;
+    font-weight: 800;
+    color: #00274F;
+}
+
+.modal-content p{
+    font-weight: 700;
+    font-size: 1.2em;
+    color: rgba(0, 0, 0, 0.432);
+    margin: 25px 0;
+}
+
+.modal-content .confirmar{
+    font-size: 1.3em;
+    font-weight: 700;
+    border: none;
+    background: #00274F;
+    color: #fff;
+    border-radius: 13px;
+    padding: 10px 80px;
+    margin-bottom: 20px;
+}
+
+.modal-content .cancelar{
+    font-size: 1.1em;
+    font-weight: 500;
+    color: #DA1414;
+    background: none;
+    border: 1px solid #DA1414;
+    border-radius: 8px;
+    padding: 10px 30px;
+}
+
+.modal-content::after{
+    content: '';
+    top: 15px;
+    width: 25%;
+    height: 4px;
+    position: absolute;
+    border-radius: 5px;
+    background: #0000001c;
+}

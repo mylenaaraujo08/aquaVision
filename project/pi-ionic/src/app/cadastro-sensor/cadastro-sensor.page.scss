@@ -1,0 +1,69 @@
+ion-content::part(background){
+    background-color: #00274F;
+}
+
+.background-telas{
+    position: absolute;
+    width: 100%;
+    z-index: -10;
+}
+
+.header{
+    display: flex;
+    width: 90%;
+    height: 72px;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 5%;
+}
+
+.header .identificador{
+    display: flex;
+    align-items: center;
+}
+
+.header .identificador h1{
+    font-family: 'Roboto';
+    font-size: 1.7em;
+    margin-left: 8px;
+    color: #E8EAED;
+    line-height: 0;
+}
+
+.cadastro-content{
+    font-family: 'Roboto';
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+}
+
+.cadastro-content h1{
+    font-weight: 700;
+    font-size: 1.2em;
+    color: #00274E;
+    margin-left: 15px;
+}
+
+.cadastro-content input{
+    margin: 20px 10px;
+    padding: 12px 0;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1em;
+    padding-left: 10px;
+    margin-top: 5px;
+    background: #fff;
+    color: #00274E;
+}
+
+.cadastro-content button{
+    margin: 5px 10px;
+    padding: 12px 0;
+    border: none;
+    background: #004D9C;
+    border-radius: 8px;
+
+    font-size: 1.2em;
+    font-weight: 700;
+    color: #fff;
+}

@@ -1,0 +1,9 @@
+/project/pi-ionic/node_modules/
+/project/server/node_modules/
+/project/pi-ionic/package-lock.json
+/project/pi-ionic/yarn.lock
+/project/server/package-lock.json
+/project/server/yarn.lock
+/project/server/prisma/.env
+/project/server/prisma/migrations/
+/project/server/tmp/

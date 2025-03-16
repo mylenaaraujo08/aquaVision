@@ -1,0 +1,39 @@
+<ion-content>
+  <img class="background-telas" src="assets/img/background-config.svg" alt="background-config">
+
+        <div class="logo-head">
+            <div class="img-logo">
+                <img src="assets/img/icons/aqua-gota.svg" alt="icon">
+            </div>
+            <div class="descricao-logo">
+                <div class="text">
+                    <h1>AIRES - Serviços ambientais</h1>
+                </div>
+                <div class="text">
+                    <h1>aquavision@aires.com</h1>
+                </div>
+            </div>
+            <div (click)="goToPage('/map')" class="voltar"><img src="/assets/img/icons/voltar.svg" alt="voltar"></div>
+        </div>
+        <!-- ajeitar a cor do segundo svg-->
+        <div class="conf-box">
+            
+            <div (click)="goToPage('ajuda')" class="conf-op">
+                <img class="icon" src="assets/img/icons/chat-int-2.svg" alt="icon">
+                <h1>AJUDA</h1>
+                <div class="img2">
+                    <img src="assets/img/icons/seta.svg" alt="icon">
+                </div>
+                
+            </div>
+            <div (click)="openModal()" class="conf-op-sair">
+                <img class="icon" src="assets/img/icons/sair.svg" alt="icon">
+                <h1>SAIR</h1>
+                <div class="img2">
+                    <img src="assets/img/icons/seta-ver.svg" alt="icon">
+                </div>
+               
+            </div>
+        </div>
+
+</ion-content>

@@ -1,0 +1,23 @@
+<ion-content>
+  <img class="background-telas" src="/assets/img/background-telas.svg" alt="background-telas">
+
+        <div class="header">
+            <div class="identificador">
+                <img src="/assets/img/icons/config-ponto.svg" alt="icon">
+                <h1>CONFIGURAÇÕES</h1>
+            </div>
+            <div (click)="goToPage('ajuste-ponto')" class="voltar"><img src="/assets/img/icons/voltar.svg" alt="voltar"></div>
+        </div>
+
+        <div class="cadastro-content">
+            <h1>CADASTRAR SENSOR</h1>
+            <div class="descri-section">
+                <img src="/assets/img/icons/desc-icon.svg" alt="descricao-icon">
+                <div class="desc-content">
+                    Insira o endereço de ip do sensor que deseja cadastrar, no campo abaixo.
+                </div>
+            </div>
+            <input placeholder="ENDEREÇAMENTO IP" type="text">
+            <button (click)="goToPage('informacoes')">CONFIRMAR</button>
+        </div>
+</ion-content>
