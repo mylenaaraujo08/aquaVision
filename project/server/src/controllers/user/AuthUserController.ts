@@ -7,9 +7,12 @@ class AuthUserController{
 
         const authUserService = new AuthUserService();
 
-        const user = await authUserService.execute({ email, senha});
-
-        res.json(user);
+        try {
+            const user = await authUserService.execute({ email, senha});
+            res.json(user);
+        } catch (error: any) {
+            res.status(400).json({ error: error.message });
+        }
     }
 }
 
