@@ -1,5 +1,4 @@
 import prismaClient from "../../prisma";
-import {hash} from 'bcryptjs'
 
 interface PontoRequest { 
     nome: string;
@@ -25,7 +24,7 @@ class CreatePontoService {
             throw new Error("User not exists")
         }
 
-        const user = await prismaClient.ponto.create({
+        const ponto = await prismaClient.ponto.create({
             data: {
                 nome: `${nome}`,
                 latitude: latitude,
@@ -37,7 +36,7 @@ class CreatePontoService {
             }
         });
 
-        return user;
+        return ponto;
     }
 }
 

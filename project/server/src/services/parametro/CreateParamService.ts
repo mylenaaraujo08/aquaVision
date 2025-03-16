@@ -7,6 +7,7 @@ interface ParametroRequest {
     temperature: number;
     salinidade: number;
     oxigenioDissolvido: number;
+    data: Date;
     pontoId: number;
 }
 
@@ -18,6 +19,7 @@ class CreateParamService {
         temperature,
         salinidade,
         oxigenioDissolvido,
+        data,
         pontoId
     }: ParametroRequest) {
         
@@ -40,7 +42,7 @@ class CreateParamService {
                 temperature,
                 salinidade,
                 oxigenioDissolvido,
-                data: new Date(),
+                data: data,
                 pontoId
             }
         });

@@ -4,7 +4,7 @@ import { CreateParamService } from '../../services/parametro/CreateParamService'
 class CreateParamController {
     handle: RequestHandler = async (req: Request, res: Response): Promise<void> => {
         try {
-            const { ph, turbidez, condutividade, temperature, salinidade, oxigenioDissolvido, pontoId } = req.body;
+            const { ph, turbidez, condutividade, temperature, salinidade, oxigenioDissolvido, data, pontoId } = req.body;
 
             const createParamService = new CreateParamService();
 
@@ -15,6 +15,7 @@ class CreateParamController {
                 temperature,
                 salinidade,
                 oxigenioDissolvido,
+                data,
                 pontoId
             });
 

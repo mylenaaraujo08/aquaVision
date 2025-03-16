@@ -23,7 +23,7 @@ class CreateMonitService {
             throw new Error("Ponto not exists")
         }
 
-        const user = await prismaClient.monitoramento.create({
+        const monit = await prismaClient.monitoramento.create({
             data: {
                 situacao: `${situacao}`,
                 pontoAlerta: pontoAlerta,
@@ -40,7 +40,7 @@ class CreateMonitService {
             }
         });
 
-        return user;
+        return monit;
     }
 }
 
