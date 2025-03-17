@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { ModalController } from '@ionic/angular';
+import { ModalController, NavParams } from '@ionic/angular';
 
 @Component({
   selector: 'app-modal-add-manual',
@@ -8,22 +8,25 @@ import { ModalController } from '@ionic/angular';
   styleUrls: ['./modal-add-manual.page.scss'],
 })
 export class ModalAddManualPage implements OnInit {
+  parametroData: any;
 
   constructor(
     private modalCtlr: ModalController,
-    private router: Router
+    private router: Router,
+    private navParams: NavParams
   ) { }
 
-  goToPage(a:string):void{
+  ngOnInit() {
+    this.parametroData = this.navParams.get('parametroData');
+    console.log('Dados recebidos:', this.parametroData);
+  }
+
+  goToPage(a: string): void {
     this.router.navigate([a]);
     this.modalCtlr.dismiss();
   }
 
-  cancelar(){
+  cancelar() {
     this.modalCtlr.dismiss();
   }
-
-  ngOnInit() {
-  }
-
 }
