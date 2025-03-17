@@ -3,12 +3,13 @@ import { CreateMonitService } from '../../services/monitoramento/CreateMonitServ
 
 class CreateMonitController{
     handle: RequestHandler = async(req: Request, res: Response): Promise<void> => {
-        const { situacao, pontoAlerta, Minimo, Maximo, pontoId } = req.body;
+        const { situacao, tipo, pontoAlerta, Minimo, Maximo, pontoId } = req.body;
 
         const createMonitService = new CreateMonitService();
 
         const user = await createMonitService.execute({ 
             situacao,
+            tipo,
             pontoAlerta,
             Minimo,
             Maximo,

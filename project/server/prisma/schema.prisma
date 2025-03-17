@@ -46,6 +46,7 @@ enum Situacao {
 model Monitoramento {
   id                      Int       @id @default(autoincrement())
   situacao                Situacao
+  tipo              String
   pontoAlerta             String
   Minimo             Float
   Maximo             Float
