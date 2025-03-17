@@ -1,12 +1,12 @@
-# AquaVision
+## AquaVision
 
 Este repositório centraliza o desenvolvimento do AquaVision, um aplicativo inovador para o monitoramento da qualidade da água em rios e reservatórios.
 
-# Visão Geral
+## Visão Geral
 
 O AquaVision foi desenvolvido para facilitar a coleta, análise e visualização de dados relacionados à qualidade da água. A plataforma permite que pesquisadores, gestores ambientais e comunidades monitorem de forma eficiente parâmetros essenciais para a preservação dos recursos hídricos.
 
-# Funcionalidades Principais
+## Funcionalidades Principais
 
 Monitoramento da Qualidade da Água: Registro e análise de parâmetros como pH, turbidez, temperatura e presença de contaminantes.
 
@@ -31,7 +31,7 @@ Back-End
 
 Inicie o servidor: yarn dev
 
-# Como Contribuir
+## Como Contribuir
 
 Se você deseja contribuir para o desenvolvimento do AquaVision, siga estas etapas:
 
