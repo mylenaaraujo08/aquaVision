@@ -1,52 +1,57 @@
 <ion-content>
-  <img class="background-telas" src="/assets/img/background-telas.svg" alt="background-telas">
-
-        <div class="header">
-            <div class="identificador">
-                <img src="/assets/img/icons/config-ponto.svg" alt="icon">
-                <h1>CONFIGURAÇÕES</h1>
+    <img class="background-telas" src="/assets/img/background-telas.svg" alt="background-telas">
+    <div class="dados-content">
+        <h1>ADICIONAR NOVOS PARÂMETROS</h1>
+        
+        <div class="descri-section">
+            <img src="/assets/img/icons/desc-icon.svg" alt="descricao-icon">
+            <div class="desc-content">
+                Insira nos campos abaixo, os dados que deseja adicionar de maneira manual.
             </div>
-            <div (click)="goToPage('ajuste-ponto')" class="voltar"><img src="/assets/img/icons/voltar.svg" alt="voltar"></div>
         </div>
 
-        <div class="dados-content">
-            <h1>ADICIONAR MANUALMENTE</h1>
-            
-            <div class="descri-section">
-                <img src="/assets/img/icons/desc-icon.svg" alt="descricao-icon">
-                <div class="desc-content">
-                    Insira nos campos abaixo, os dados que deseja adicionar de maneira manual.
-                </div>
+        <div class="campos-dados">
+            <div class="input">
+                <label for="ponto">PONTO DE MONITORAMENTO</label>
+                <select name="ponto" [(ngModel)]="parametroData.pontoId" required>
+                    <option [ngValue]="null">Selecione um ponto</option>
+                    <option *ngFor="let ponto of pontos" [ngValue]="ponto.id">
+                        {{ponto.nome}}
+                    </option>
+                </select>
             </div>
 
-            <div class="campos-dados">
-                <div class="input">
-                    <label for="ph">PH</label>
-                    <input name="ph" type="text">
-                </div>
-                <div class="input">
-                    <label for="ph">TEMPERATURA</label>
-                    <input name="ph" type="text">
-                </div>
-                <div class="input">
-                    <label for="ph">SALINIDADE</label>
-                    <input name="ph" type="text">
-                </div>
-                <div class="input">
-                    <label for="ph">TURBIDEZ</label>
-                    <input name="ph" type="text">
-                </div>
-                <div class="input">
-                    <label for="ph">CONDUTIVIDADE</label>
-                    <input name="ph" type="text">
-                </div>
-                <div class="input">
-                    <label for="ph">OXIGÊNIO</label>
-                    <input name="ph" type="text">
-                </div>
+            <div class="input">
+                <label for="ph">PH</label>
+                <input name="ph" type="number" [(ngModel)]="parametroData.ph">
             </div>
 
-            <button (click)="openModal()">CONFIRMAR</button>
+            <div class="input">
+                <label for="temperatura">TEMPERATURA</label>
+                <input name="temperatura" type="number" [(ngModel)]="parametroData.temperature">
+            </div>
+
+            <div class="input">
+                <label for="salinidade">SALINIDADE</label>
+                <input name="salinidade" type="number" [(ngModel)]="parametroData.salinidade">
+            </div>
+
+            <div class="input">
+                <label for="turbidez">TURBIDEZ</label>
+                <input name="turbidez" type="number" [(ngModel)]="parametroData.turbidez">
+            </div>
+
+            <div class="input">
+                <label for="condutividade">CONDUTIVIDADE</label>
+                <input name="condutividade" type="number" [(ngModel)]="parametroData.condutividade">
+            </div>
+
+            <div class="input">
+                <label for="oxigenio">OXIGÊNIO</label>
+                <input name="oxigenio" type="number" [(ngModel)]="parametroData.oxigenioDissolvido">
+            </div>
         </div>
 
+        <button (click)="createParametro()">CONFIRMAR</button>
+    </div>
 </ion-content>
