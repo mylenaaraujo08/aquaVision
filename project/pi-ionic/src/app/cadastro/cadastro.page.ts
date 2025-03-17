@@ -13,7 +13,7 @@ export class CadastroPage {
   constructor(private apiService: ApiService, private router: Router) { }
 
   register() {
-    if (this.userData.password !== this.userData.confirmPassword) {
+    if (this.userData.senha !== this.userData.confirmPassword) {
       console.log('Passwords do not match');
       return;
     }
