@@ -31,8 +31,10 @@ export class ApiService {
     return this.http.post(`${this.apiURL}/create/ponto`, formData);
   }
 
-  listPontos(): Observable<any> {
-    return this.http.get(`${this.apiURL}/list/pontos`);
+  listPontos(userId: number): Observable<any> {
+    return this.http.get(`${this.apiURL}/list/pontos`, { 
+      params: { user_id: userId }
+    });
   }
 
   detailPonto(pontoId: string): Observable<any> {
