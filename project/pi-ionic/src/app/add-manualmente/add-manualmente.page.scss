@@ -1,5 +1,10 @@
-ion-content::part(background){
-    background-color: #00274F;
+
+ion-content {
+  --background: #00274F;
+}
+
+ion-header ion-toolbar {
+  --background: transparent;
 }
 
 .background-telas{
@@ -15,6 +20,10 @@ ion-content::part(background){
     justify-content: space-between;
     align-items: center;
     margin: 0 5%;
+}
+
+.descri-section {
+    margin-bottom: 2rem;
 }
 
 .header .identificador{
@@ -35,6 +44,7 @@ ion-content::part(background){
     display: flex;
     flex-direction: column;
     margin-top: 15px;
+    padding: 16px;
 }
 
 .dados-content h1{
@@ -42,6 +52,9 @@ ion-content::part(background){
     font-size: 1.2em;
     color: #00274E;
     margin-left: 15px;
+    color: #ffffff;
+    font-size: 1.5em;
+    margin-bottom: 16px;
 }
 
 .campo-param{
@@ -105,4 +118,11 @@ ion-content::part(background){
     font-size: 1.2em;
     font-weight: 700;
     color: #fff;
+}
+
+.content-add {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 16px;
+  margin-top: 16px;
 }
