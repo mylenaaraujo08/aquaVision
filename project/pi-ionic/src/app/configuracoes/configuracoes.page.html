@@ -7,10 +7,12 @@
             </div>
             <div class="descricao-logo">
                 <div class="text">
-                    <h1>AIRES - Serviços ambientais</h1>
+                    <h1>{{userData.nome}}</h1>
                 </div>
                 <div class="text">
-                    <h1>aquavision@aires.com</h1>
+                    <h1>
+                        {{userData.email}}
+                    </h1>
                 </div>
             </div>
             <div (click)="goToPage('/map')" class="voltar"><img src="/assets/img/icons/voltar.svg" alt="voltar"></div>
