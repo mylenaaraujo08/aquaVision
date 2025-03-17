@@ -22,11 +22,20 @@ export class MonitoramentoPage implements OnInit {
   }
 
   ngOnInit() {
-    //const userData = this.authService.getUserData();
-    this.apiService.listPontos(1).subscribe({
+    const userData = this.authService.getUserData();
+    this.apiService.listPontos(userData.id).subscribe({
       next: (response: any[]) => {
-        this.pontos = response.filter(ponto => ponto.monitoramento[0]?.situacao === 'ALERTA');
-        console.log(this.pontos)
+        interface Monitoramento {
+          situacao: 'ALERTA' | 'NORMAL' | 'CRITICO';
+        }
+
+        interface Ponto {
+          monitoramento?: Monitoramento[];
+        }
+
+                this.pontos = response.filter((ponto: Ponto) => 
+                  ponto.monitoramento?.some((m: Monitoramento) => m.situacao === 'ALERTA')
+                );
       },
       error: (error) => {
         console.error('Error fetching pontos', error);
