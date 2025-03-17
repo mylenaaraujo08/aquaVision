@@ -19,6 +19,10 @@ class ListPontosService {
                 user_id: user_id
             },select: {
                 id: true,
+                nome: true,
+                tipo: true,
+                monitoramento: true,
+                parametro: true,
             }
         });
 
